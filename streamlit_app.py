@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 st.title('🎈 Machine learning App')
 
@@ -15,6 +16,7 @@ X
 st.write('**Y**')
 y = df.species
 y
+
 #species","island","bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex#
 with st.expander('Data Visulaisation'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color ='species')
@@ -28,13 +30,3 @@ with st.sidebar():
   body_mass_g = st.slider('Body mass (g)', 2700.0, 6300.0, 4207.0)
   gender = st.selectbox('Gender', ('male', 'female'))
 
-    # Create a DataFrame for the input features
-data = {'island': island,
-          'bill_length_mm': bill_length_mm,
-          'bill_depth_mm': bill_depth_mm,
-          'flipper_length_mm': flipper_length_mm,
-          'body_mass_g': body_mass_g,
-          'sex': gender}
- 
-
-                          
