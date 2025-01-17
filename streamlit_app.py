@@ -18,8 +18,8 @@ y
 #species","island","bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex#
 with st.expander('Data Visulaisation'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color ='species')
-#st.selectbox(label, options, index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder="Choose an option", disabled=False, label_visibility="visible")#
- with st.slider():
+
+with st.slider():
   st.header('Input features')
   island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
   bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 43.9)
@@ -29,7 +29,7 @@ with st.expander('Data Visulaisation'):
   gender = st.selectbox('Gender', ('male', 'female'))
 
     # Create a DataFrame for the input features
-  data = {'island': island,
+data = {'island': island,
           'bill_length_mm': bill_length_mm,
           'bill_depth_mm': bill_depth_mm,
           'flipper_length_mm': flipper_length_mm,
