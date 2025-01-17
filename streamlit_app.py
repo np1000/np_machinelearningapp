@@ -13,6 +13,6 @@ X=df.drop('species',axis=1)
 X
 
 st.write('**Y**')
-y = df('species')
+y = df.species
 y
 
